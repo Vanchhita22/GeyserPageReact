@@ -1,0 +1,46 @@
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes changeBgColor {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #3498db;
+  }
+}
+
+.animated-navbar {
+  animation: slideInFromTop 0.5s ease-in-out, fadeIn 1s ease-in-out;
+}
+
+.animated-navbar:hover {
+  animation: changeBgColor 0.5s ease-in-out;
+}
+
+
+
+
+
+@media (max-width: 770px) {
+  .navbar {
+      position: fixed; /* Change to static position for smaller screens */
+      width: 75%; /* Make it full-width for smaller screens */
+      margin: 0; /* Adjust margin for smaller screens if needed */
+  }
+}
